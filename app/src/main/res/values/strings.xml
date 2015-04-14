@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">VoxSync Assesment</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="load_image">Load image</string>
+    <string name="draw_text">Draw text on bitmap</string>
+
+    <string name="enter_text">Please enter a message in the box.</string>
+    <string name="select_image">Please select an image.</string>
+</resources>

@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/main_layout_default_margin"
+    android:background="@drawable/layout_frame_rectangle"
+    android:paddingBottom="@dimen/main_layout_bottom_padding"
+    android:paddingLeft="@dimen/main_layout_side_padding"
+    android:paddingRight="@dimen/main_layout_side_padding"
+    android:paddingTop="@dimen/main_layout_top_padding"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/colorButtonsLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/colorButtonBlackLayout"
+            style="@style/ColorButtonContainer">
+
+            <Button
+                android:id="@+id/colorBtnBlack"
+                style="@style/CircleButton"
+                android:background="@drawable/circle_black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/colorButtonBlueLayout"
+            style="@style/ColorButtonContainer">
+
+            <Button
+                android:id="@+id/colorBtnBlue"
+                style="@style/CircleButton"
+                android:background="@drawable/circle_blue" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/colorButtonRedLayout"
+            style="@style/ColorButtonContainer">
+
+            <Button
+                android:id="@+id/colorBtnRed"
+                style="@style/CircleButton"
+                android:background="@drawable/circle_red" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/colorButtonGreenLayout"
+            style="@style/ColorButtonContainer">
+
+            <Button
+                android:id="@+id/colorBtnGreen"
+                style="@style/CircleButton"
+                android:background="@drawable/circle_green" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loadImageBtn"
+        style="@style/MenuElement"
+        android:background="@drawable/gradient"
+        android:text="@string/load_image"
+        android:textColor="@android:color/white" />
+
+    <EditText
+        android:id="@+id/inputCaption"
+        style="@style/MenuElement"
+        android:layout_below="@id/loadImageBtn"
+        android:background="@drawable/caption_rectangle"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/drawTextOnBitmap"
+        style="@style/MenuElement"
+        android:layout_below="@id/inputCaption"
+        android:background="@drawable/gradient"
+        android:text="@string/draw_text"
+        android:textColor="@android:color/white" />
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/bitmapFrame"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/colorButtonsLayout"
+        android:layout_below="@id/drawTextOnBitmap"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/menu_button_margin"
+        android:layout_marginTop="@dimen/menu_button_margin">
+
+        <ImageView
+            android:id="@+id/bitmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/bitmapCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/caption_default_margin"
+            android:background="#40808080"
+            android:gravity="center"
+            android:padding="@dimen/menu_button_padding"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/menu_button_text_size"
+            android:typeface="serif"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/closeCaptionBtn"
+            style="@style/CircleButton"
+            android:layout_gravity="right|top"
+            android:background="@drawable/circle_small_close"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+</RelativeLayout>

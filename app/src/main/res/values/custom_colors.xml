@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="custom_black">#000000</color>
+    <color name="custom_blue">#5F95C7</color>
+    <color name="custom_red">#CC6560</color>
+    <color name="custom_green">#A8C26B</color>
+</resources>
